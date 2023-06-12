@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto' , sans-serif;
+  --text-color: hsla(240, 9%, 89%, 1);
+
+  --hue:195;
+  --primary-color: hsla(var(--hue), 91%, 25%, 1);
+}
+
+body{
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: #2F2F33;
+}
+
+body *{
+  font-family: var(--ff-primary);
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+#app{
+  padding: 2rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+header h1{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search input{
+  background: hsla(191, 65%, 7%, 1);
+  height: 4.7rem;
+  border: none;
+  border-radius: .4rem .4rem .4rem .4rem;
+  padding: 0 .8rem;
+  width: 46.2rem;
+}
+
+.search button{
+  height: 5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search button :hover{
+  filter : brightness(1.1);
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+
+  box-shadow: 0 0 .4rem .2rem rgba(0,0,0,0.3);
+}
+
+table *{
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th {
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+
+}
+
+table th:first-child{
+  border-top-left-radius: .4rem;
+}
+table th:last-child{
+  border-top-right-radius: .4rem;
+}
+
+
+
+table tr:nth-child(odd){
+  background:#06181C;
+}
+table tr{
+  background:#4A808C;
+}
+
+table td{
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img{
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a p{
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+  flex-grow: 3;
+  width: 100%;
+  background :hsla(192, 62%, 3%, 1);
+  height: 30vw;
+}
+.container{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: center;
+}
